@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>৪৫ দিনের অর্ধ-বার্ষিক ড্যাশবোর্ড</title>
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --secondary: #64748b;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --accent: #10b981;
+            --writing: #ef4444;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            padding: 10px;
+            color: #1e293b;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--primary), #6366f1);
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+        .slot-bar {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .slot {
+            background: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            white-space: nowrap;
+            font-size: 0.8rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .part-card {
+            background: var(--card);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid var(--primary);
+        }
+        .part-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+        }
+        .part-title { font-weight: bold; color: var(--primary); font-size: 1.1rem; }
+        .days { background: #e0e7ff; color: var(--primary); padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; }
+        
+        .sub-box { margin-bottom: 12px; }
+        .sub-name { font-weight: bold; font-size: 0.85rem; color: var(--secondary); display: block; margin-bottom: 5px; border-left: 3px solid var(--accent); padding-left: 7px; }
+        
+        .task { display: flex; align-items: flex-start; margin-bottom: 6px; font-size: 0.9rem; }
+        input[type="checkbox"] { margin-right: 10px; margin-top: 3px; min-width: 17px; min-height: 17px; accent-color: var(--accent); }
+        
+        .writing-text { color: var(--writing); font-weight: 500; }
+        .cq-text { color: #2563eb; font-weight: 500; }
+        
+        .break-card { border-top: 5px solid #ec4899; background: #fdf2f8; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2 style="margin:0">অর্ধ-বার্ষিক প্রস্তুতি ২০২৬</h2>
+    <p style="margin:5px 0 0; font-size:0.9rem; opacity:0.9">৮টি বিষয় | ৪৫ দিন | বিস্তারিত চেকলিস্ট</p>
+</header>
+
+<div class="slot-bar">
+    <div class="slot"><b>S1:</b> গণিত</div>
+    <div class="slot"><b>S2:</b> বিজ্ঞান</div>
+    <div class="slot"><b>S3:</b> ইংরেজি</div>
+    <div class="slot"><b>S4:</b> ধর্ম/ICT</div>
+    <div class="slot"><b>S5:</b> BGS</div>
+    <div class="slot"><b>S6:</b> বাংলা/CQ</div>
+</div>
+
+<div class="part-card">
+    <div class="part-header">
+        <span class="part-title">পার্ট ১: শুরু ও বেসিক</span>
+        <span class="days">দিন ১-৫</span>
+    </div>
+    <div class="sub-box">
+        <span class="sub-name">গণিত ও বিজ্ঞান</span>
+        <div class="task"><input type="checkbox"> গণিত: প্যাটার্ন (অধ্যায় ১)</div>
+        <div class="task"><input type="checkbox"> বিজ্ঞান: প্রাণিজগতের শ্রেণিবিন্যাস (অধ্যায় ১)</div>
+    </div>
+    <div class="sub-box">
+        <span class="sub-name">বিজিএস, ধর্ম ও আইসিটি</span>
+        <div class="task"><input type="checkbox"> BGS: অধ্যায় ১ (ঔপনিবেশিক শাসন)</div>
+        <div class="task"><input type="checkbox"> ইসলাম: অধ্যায় ১ (আকাইদ)</div>
+        <div class="task"><input type="checkbox"> ICT: অধ্যায় ১ (গুরুত্ব)</div>
+    </div>
+    <div class="sub-box">
+        <span class="sub-name">ভাষা ও নির্মিতি</span>
+        <div class="task"><input type="checkbox"> বাংলা ১: অতিথির স্মৃতি, ভাব ও কাজ</div>
+        <div class="task"><input type="checkbox"> বাংলা ২: ভাষা ও মাতৃভাষা (১.১-১.৩)</div>
+        <div class="task"><input type="checkbox"> English: EFT Unit 1-2</div>
+    </div>
+    <div class="sub-box">
+        <div class="task"><input type="checkbox"> <span class="writing-text">Paragraph: A School Magazine</span></div>
+        <div class="task"><input type="checkbox"> <span class="cq-text">CQ: প্যাটার্নের ৩টি সৃজনশীল</span></div>
+    </div>
+</div>
+
+<div class="part-card">
+    <div class="part-header">
+        <span class="part-title">পার্ট ২: গতি বৃদ্ধি</span>
+        <span class="days">দিন ৬-১০</span>
+    </div>
+    <div class="sub-box">
+        <span class="sub-name">গণিত ও বিজ্ঞান</span>
+        <div class="task"><input type="checkbox"> গণিত: মুনাফা (অধ্যায় ২.১-২.২)</div>
+        <div class="task"><input type="checkbox"> বিজ্ঞান: কোষ বিভাজন (অধ্যায় ২)</div>
+    </div>
+    <div class="sub-box">
+        <span class="sub-name">বিজিএস, ধর্ম ও আইসিটি</span>
+        <div class="task"><input type="checkbox"> BGS: অধ্যায় ২ (মুক্তিসংগ্রাম)</div>
+        <div class="task"><input type="checkbox"> ইসলাম: অধ্যায় ২ (ইবাদত: ১-৫ পাঠ)</div>
+        <div class="task"><input type="checkbox"> ICT: অধ্যায় ২ (নেটওয়ার্ক)</div>
+    </div>
+    <div class="sub-box">
+        <span class="sub-name">ভাষা ও নির্মিতি</span>
+        <div class="task"><input type="checkbox"> বাংলা ১: মানবধর্ম, বঙ্গভূমির প্রতি</div>
+        <div class="task"><input type="checkbox"> বাংলা ২: ধ্বনি ও বর্ণ (২.১-২.৩)</div>
+        <div class="task"><input type="checkbox"> English: EFT Unit 3</div>
+    </div>
+    <div class="sub-box">
+        <div class="task"><input type="checkbox"> <span class="writing-text">Letter: Exam Preparation</span></div>
+        <div class="task"><input type="checkbox"> <span class="cq-text">CQ: কোষ বিভাজনের চিত্রসহ ২ টি</span></div>
+    </div>
+</div>
+
+<div class="part-card break-card">
+    <div class="part-header" style="border-color:#fbcfe8">
+        <span class="part-title" style="color:#be185d">দিন ১১: ব্যাকআপ ও ছুটি</span>
+    </div>
+    <p style="font-size:0.85rem; margin:0">গত ১০ দিনের কোনো পড়া বাকি থাকলে শেষ করো। কোনো চাপ নিবে না।</p>
+</div>
+
+<div class="part-card">
+    <div class="part-header">
+        <span class="part-title">পার্ট ৩: মাঝপথ</span>
+        <span class="days">দিন ১২-১৬</span>
+    </div>
+    <div class="sub-box">
+        <span class="sub-name">গণিত ও বিজ্ঞান</span>
+        <div class="task"><input type="checkbox"> গণিত: পরিমাপ (অধ্যায় ৩)</div>
+        <div class="task"><input type="checkbox"> বিজ্ঞান: ব্যাপন ও বংশবৃদ্ধি (অধ্যায় ৩-৪)</div>
+    </div>
+    <div class="sub-box">
+        <span class="sub-name">অন্যান্য বিষয়</span>
+        <div class="task"><input type="checkbox"> BGS: অধ্যায় ৩ ও ৪ | ইসলাম: অধ্যায় ২ (বাকি)</div>
+        <div class="task"><input type="checkbox"> বাংলা ১: পড়ে পাওয়া, তৈলচিত্রের ভূত</div>
+        <div class="task"><input type="checkbox"> বাংলা ২: সন্ধি ও লিঙ্গ | English: Unit 4</div>
+    </div>
+    <div class="sub-box">
+        <div class="task"><input type="checkbox"> <span class="writing-text">Application: Setting up a Canteen</span></div>
+        <div class="task"><input type="checkbox"> <span class="cq-text">CQ: পরিমাপের ৫টি বোর্ড অংক</span></div>
+    </div>
+</div>
+
+<div class="part-card">
+    <div class="part-header">
+        <span class="part-title">পার্ট ৪: জ্যামিতি স্পেশাল</span>
+        <span class="days">দিন ১৭-২১</span>
+    </div>
+    <div class="sub-box">
+        <span class="sub-name">গণিত ও বিজ্ঞান</span>
+        <div class="task"><input type="checkbox"> গণিত: জ্যামিতি (উপপাদ্য ১, ২, ৩)</div>
+        <div class="task"><input type="checkbox"> বিজ্ঞান: পরমাণুর গঠন (অধ্যায় ৬)</div>
+    </div>
+    <div class="sub-box">
+        <span class="sub-name">অন্যান্য বিষয়</span>
+        <div class="task"><input type="checkbox"> BGS: অধ্যায় ৫ | ICT: অধ্যায় ৩</div>
+        <div class="task"><input type="checkbox"> বাংলা ১: সুখী মানুষ, দুই বিঘা জমি</div>
+        <div class="task"><input type="checkbox"> বাংলা ২: সারাংশ ৩টি | English: Unit 5</div>
+    </div>
+    <div class="sub-box">
+        <div class="task"><input type="checkbox"> <span class="writing-text">Email Writing Practice</span></div>
+        <div class="task"><input type="checkbox"> <span class="cq-text">CQ: উপপাদ্যগুলো না দেখে লেখা</span></div>
+    </div>
+</div>
+
+<p style="text-align:center; font-size:0.75rem; color:#94a3b8">বাকি পার্টগুলো (৫-৯) একই নিয়মে অনুসরণ করো। শুভকামনা!</p>
+
+</body>
+</html>
