@@ -5,11 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>৪৫ দিনের ফুল স্টাডি প্ল্যানার</title>
 
-<!-- FAVICON SETUP -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
-<meta name="theme-color" content="#071220">
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="logo.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
 
@@ -33,6 +30,12 @@ color:var(--text)
 header{
 text-align:center;
 padding:20px
+}
+
+.logo{
+width:110px;
+margin-bottom:10px;
+filter:drop-shadow(0 0 10px #00e0ff);
 }
 
 header h1{
@@ -95,6 +98,7 @@ font-size:1.1rem
 <body>
 
 <header>
+<img src="logo.png" alt="Website Logo" class="logo">
 <h2>بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
 <h1>৪৫ দিনের ফুল স্টাডি প্ল্যানার</h1>
 <p>বলদ পারবি তুই ইন শা আল্লাহ</p>
@@ -106,6 +110,65 @@ font-size:1.1rem
 <strong>📊 মোট অগ্রগতি</strong>
 <div class="progress"><span id="bar"></span></div>
 <p id="percent">0% সম্পন্ন</p>
+</div>
+
+<div id="planner"></div>
+
+<div class="footer" id="gift"></div>
+</div>
+
+<script>
+const parts = [
+{
+ t:"পার্ট ১ (দিন ১-৫)",
+ d:[
+"গণিত: প্যাটার্ন (অধ্যায় ১)",
+"বিজ্ঞান: প্রাণিজগতের শ্রেণিবিন্যাস (অধ্যায় ১)",
+"English: EFT Unit 1-2",
+"BGS: অধ্যায় ১ (ঔপনিবেশিক শাসন)",
+"ইসলাম: অধ্যায় ১ (আকাইদ)",
+"বাংলা ১: অতিথির স্মৃতি, ভাব ও কাজ",
+"বাংলা ২: ভাষা ও মাতৃভাষা (১.১-১.৩)",
+"ICT: অধ্যায় ১ (গুরুত্ব)",
+"Paragraph: A School Magazine",
+"CQ: প্যাটার্নের ৩টি সৃজনশীল"
+]
+}
+];
+
+const planner=document.getElementById('planner');
+let total=0,done=0;
+
+parts.forEach(p=>{
+ const div=document.createElement('div');
+ div.className='part';
+ let html=`<h3>${p.t}</h3><ul>`;
+ p.d.forEach(x=>{
+   total++;
+   html+=`<li><label><input type="checkbox" class="chk"> ${x}</label></li>`
+ });
+ html+='</ul>';
+ div.innerHTML=html;
+ planner.appendChild(div);
+});
+
+function update(){
+ done=document.querySelectorAll('.chk:checked').length;
+ let per=Math.round((done/total)*100);
+ document.getElementById('bar').style.width=per+'%';
+ document.getElementById('percent').innerText=per+'% সম্পন্ন';
+ if(per===100){
+   document.getElementById('gift').innerHTML='🎉 আলহামদুলিল্লাহ! পটু, তুই পুরো ৪৫ দিনের মিশন শেষ করেছিস! 🎁 ভাইয়ার ভালোবাসা রইল 💖';
+ }
+}
+
+document.addEventListener('change',e=>{
+ if(e.target.classList.contains('chk')) update();
+});
+</script>
+
+</body>
+</html><p id="percent">0% সম্পন্ন</p>
 </div>
 
 <div id="planner"></div>
@@ -433,6 +496,7 @@ document.addEventListener('change',e=>{
 
 </body>
 </html>
+
 
 
 
